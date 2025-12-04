@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>فرم ورود با Ternary</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    input,
+    button {
+      display: block;
+      margin-top: 10px;
+      padding: 8px;
+      width: 250px;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .success {
+      color: green;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>فرم ورود</h2>
+
+  <input type="text" id="username" placeholder="نام کاربری">
+  <input type="password" id="password" placeholder="رمز عبور">
+  <button id="loginBtn" >ورود</button>
+
+  <div id="message"></div>
+
+  <script>
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
+    const loginBtn = document.getElementById("loginBtn");
+    const messageDiv = document.getElementById("message");
+
+    const correctUsername = "omid";
+    const correctPassword = "12345";
+
+    loginBtn.addEventListener("click", function () {
+      const username = usernameInput.value.trim();
+      const password = passwordInput.value;
+
+      const isLoggedIn = (username === correctUsername && password === correctPassword) ? true : false;
+
+      messageDiv.textContent = isLoggedIn ? "خوش آمدید!" : "نام کاربری یا رمز عبور اشتباه است";
+      messageDiv.className = isLoggedIn ? "success" : "error";
+
+      console.log(isLoggedIn ? "ورود موفق" : "ورود ناموفق");
+    });
+  </script>
+
+</body>
+
+</html>

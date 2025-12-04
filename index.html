@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+
+
+    <script>
+
+        let para = document.querySelector("#demo");
+        
+        //  for (let index = 0; index < names.length; index++) {
+        //     para.innerHTML +="the name is: "+ names[index] +"<br>";
+
+        // }
+        // for (const i of names) {
+        //     para.innerHTML +=i +"<br>";
+        // }
+       
+        const jobs = {
+            title: "developer",
+            rules: "Programming..."
+
+        }
+        const cities = [{
+            cityname: "London",
+            cityinfo: "is capital...",
+            citydesc: "goldendege bridge...."
+        },
+        {
+            cityname: "Paris",
+            cityinfo: " is....",
+            citydesc: "is...."
+        }
+        ];
+        jobs.title
+        // OMID: Write/SET to Property
+        cities[1].cityname = "Tokyo";
+        // OMID: Read/GET from Property
+        console.log(cities[1].cityname);
+
+    </script>
+</body>
+
+</html>

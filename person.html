@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="personList"></div>
+
+    <script>
+        const person = [
+            { name: "Omid", age: 30, job: "Programmer", MaritalStatus: true },
+            { name: "Ahmad", age: 20, job: "Graphic Designer", MaritalStatus: false }
+        ];
+
+        const container = document.getElementById("personList");
+
+        person.forEach(p => {
+            container.innerHTML += `
+    <p>
+      Name: ${p.name} <br>
+      Age: ${p.age} <br>
+      Job: ${p.job} <br>
+      Marital Status: ${p.MaritalStatus ? "Married" : "Single"}
+    </p>
+    <hr>
+  `;
+        });
+    </script>
+
+</body>
+
+</html>
